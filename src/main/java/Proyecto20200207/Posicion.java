@@ -18,5 +18,8 @@ public class Posicion {
         this.fila = fila;
         this.columna = columna;
     }
+    Posicion()
+    {
+    }
 
 }

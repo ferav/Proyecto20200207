@@ -5,6 +5,7 @@
  */
 
 import Proyecto20200207.RompeCabezas;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,6 +44,7 @@ public class RompeCabezasTest {
     // @Test
     // public void hello() {}
     
+    //Prueba del Objetivo 1
     @Test
     public void testGenerarEstructura()
     {
@@ -58,6 +60,7 @@ public class RompeCabezasTest {
         assertTrue(respuesta == true);
     }
     
+    //Prueba del Objetivo 1
     @Test
     public void testMatrisNoTienHueco() {
         
@@ -72,6 +75,8 @@ public class RompeCabezasTest {
         assertTrue(respuesta == true);
     }
     
+    
+    //Prueba del Objetivo 1
     @Test
     public void testRompecapezasImprimirMatriz() {
         
@@ -87,5 +92,21 @@ public class RompeCabezasTest {
         assertTrue(esperado.equals(imprimible));
         System.out.println(imprimible);     
     }
+    
+    
+    //Prueba del Objetivo 2
+    @Test
+    public void testGenerarPosiblesMovimentosHueco() {
+        int[][] matriz ={
+            {1,2,3,4},
+            {5,6,7,8},
+            {9,10,11,12},
+            {130,14,15,0}
+        };
+        RompeCabezas rompeCabezas = new RompeCabezas(matriz);
+        ArrayList res = rompeCabezas.generarPosiblesMovimientosHueco();
+        assertTrue(res.isEmpty() == false);     
+    }
+
 
 }

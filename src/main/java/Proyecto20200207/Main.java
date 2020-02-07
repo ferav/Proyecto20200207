@@ -5,6 +5,8 @@
  */
 package Proyecto20200207;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Administrador
@@ -17,10 +19,10 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         int[][] matriz ={
-            {1,2,3,4},
+            {0,2,3,4},
             {5,6,7,8},
             {9,10,11,12},
-            {13,14,15,0}
+            {13,14,15,1}
         };
         String esperado = "1  2  3  /n";
         RompeCabezas rompeCabezas = new RompeCabezas(matriz);
@@ -29,6 +31,14 @@ public class Main {
         
         boolean res = rompeCabezas.verificarMatrisCuadrada();
         System.out.println("matriz cuadrada : "+ res);
+        
+        rompeCabezas.obtenerPosicionHueco();
+        ArrayList<Posicion> movimientos = rompeCabezas.generarPosiblesMovimientosHueco();
+         System.out.println("fila hueco :" + rompeCabezas.hueco.posicion.fila + " columna hueco: "+ rompeCabezas.hueco.posicion.columna);
+        for(int i = 0;i<movimientos.size();i++)
+        {
+            System.out.println("fila :" + movimientos.get(i).fila + " columna: "+movimientos.get(i).columna);
+        }
 
     }
     

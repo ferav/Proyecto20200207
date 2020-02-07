@@ -5,6 +5,8 @@
  */
 package Proyecto20200207;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Administrador
@@ -17,6 +19,7 @@ public class RompeCabezas {
     {
         this.matriz = matriz;
         hueco = new Hueco();
+        obtenerPosicionHueco();
     }
     
     
@@ -113,7 +116,8 @@ public class RompeCabezas {
         while(cociente != 0);
         return res;
     }
-    public void generarPosicionHueco(int fila, int columna)
+    
+    public void obtenerPosicionHueco()
     {
         
         for (int x = 0; x < matriz.length; x++) 
@@ -122,13 +126,39 @@ public class RompeCabezas {
             {
                 if(matriz[x][y] == 0)
                 {
-                    hueco.fila = x;
-                    hueco.columna = y;
+                    hueco.posicion.fila = x;
+                    hueco.posicion.columna = y;
                 }
             }
             
         }
         
+    }
+    
+    public ArrayList generarPosiblesMovimientosHueco()
+    {
+        ArrayList<Posicion> res = new ArrayList();
+        
+        int filaHueco = hueco.posicion.fila;
+        int columnaHueco = hueco.posicion.columna;
+        if(filaHueco + 1 < matriz.length)
+        {
+            res.add(new Posicion(filaHueco + 1, columnaHueco));
+        }
+        if(filaHueco - 1 >= 0)
+        {
+            res.add(new Posicion(filaHueco - 1, columnaHueco));
+        }
+        
+        if(columnaHueco + 1 < matriz[filaHueco].length)
+        {
+            res.add(new Posicion(filaHueco, columnaHueco + 1));
+        }
+        if(columnaHueco - 1 >= 0)
+        {
+            res.add(new Posicion(filaHueco, columnaHueco - 1));
+        }
+        return res;
     }
 
 }

@@ -11,8 +11,6 @@ package Proyecto20200207;
  */
 public class Hueco {
     Posicion posicion;
-    int fila;
-    int columna;
     public Hueco(int fila1, int columna1)
     {
         posicion = new Posicion(fila1, columna1);
@@ -20,6 +18,7 @@ public class Hueco {
     }
     public Hueco()
     {
+        posicion = new Posicion();
     }
 
 }
