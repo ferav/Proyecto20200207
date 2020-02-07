@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Proyecto20200207.Posicion;
 import Proyecto20200207.RompeCabezas;
 import java.util.ArrayList;
 import org.junit.After;
@@ -106,6 +107,25 @@ public class RompeCabezasTest {
         RompeCabezas rompeCabezas = new RompeCabezas(matriz);
         ArrayList res = rompeCabezas.generarPosiblesMovimientosHueco();
         assertTrue(res.isEmpty() == false);     
+    }
+    
+    //Prueba del Objetivo 3
+    @Test
+    public void testMoverHueco() {
+        
+        int[][] matriz ={
+            {1,2,3,4},
+            {5,6,7,8},
+            {9,10,11,12},
+            {13,14,15,0}
+        };
+        String esperado = "1  2  3  4  \n5  6  7  8  \n9  10 11 0  \n13 14 15 12 \n";
+        RompeCabezas rompeCabezas = new RompeCabezas(matriz);
+        ArrayList<Posicion> res = rompeCabezas.generarPosiblesMovimientosHueco();
+        rompeCabezas.moverHueco(res.get(0));
+        String imprimible = rompeCabezas.generarImprimible();
+        assertTrue(esperado.equals(imprimible));
+        System.out.println(imprimible);     
     }
 
 

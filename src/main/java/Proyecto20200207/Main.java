@@ -19,10 +19,10 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         int[][] matriz ={
-            {0,2,3,4},
+            {1,2,3,4},
             {5,6,7,8},
             {9,10,11,12},
-            {13,14,15,1}
+            {13,14,15,0}
         };
         String esperado = "1  2  3  /n";
         RompeCabezas rompeCabezas = new RompeCabezas(matriz);
@@ -39,6 +39,11 @@ public class Main {
         {
             System.out.println("fila :" + movimientos.get(i).fila + " columna: "+movimientos.get(i).columna);
         }
+        
+        
+        rompeCabezas.moverHueco(movimientos.get(0));
+         String imprimible2 = rompeCabezas.generarImprimible();  
+        System.out.println(imprimible2); 
 
     }
     

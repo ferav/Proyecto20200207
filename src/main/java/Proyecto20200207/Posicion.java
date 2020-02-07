@@ -21,5 +21,20 @@ public class Posicion {
     Posicion()
     {
     }
-
+    public int getFila()
+    {
+        return fila;
+    }
+    public int getColumna()
+    {
+        return columna;
+    }
+    public void setFila(int nuevaFila)
+    {
+        fila = nuevaFila;
+    }
+    public void setColumna(int nuevaColumna)
+    {
+        columna = nuevaColumna;
+    }
 }

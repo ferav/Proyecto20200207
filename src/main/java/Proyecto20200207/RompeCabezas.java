@@ -160,5 +160,16 @@ public class RompeCabezas {
         }
         return res;
     }
+    
+    
+    public void moverHueco(Posicion posicion)
+    {
+        int numero = matriz[posicion.fila][posicion.columna];
+        matriz[ hueco.posicion.fila][hueco.posicion.columna] = numero ;
+        hueco.posicion.fila = posicion.fila;
+        hueco.posicion.columna = posicion.columna;
+        matriz[posicion.fila][posicion.columna] = 0;
+                
+    }
 
 }
