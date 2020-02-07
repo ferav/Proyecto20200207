@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RompeCabezasTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-07T23:02:25" hostname="Ayala-PC" time="0.024">
+<testsuite name="RompeCabezasTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-07T23:51:52" hostname="Ayala-PC" time="0.024">
   <properties/>
-  <testcase name="testRompecapezasImprimirMatriz" classname="RompeCabezasTest" time="0.02"/>
-  <testcase name="testMoverHueco" classname="RompeCabezasTest" time="0.001"/>
+  <testcase name="testRompecapezasImprimirMatriz" classname="RompeCabezasTest" time="0.021"/>
+  <testcase name="testMoverHueco" classname="RompeCabezasTest" time="0.002"/>
   <testcase name="testGenerarEstructura" classname="RompeCabezasTest" time="0.0"/>
-  <testcase name="testGenerarPosiblesMovimentosHueco" classname="RompeCabezasTest" time="0.0"/>
-  <testcase name="testMatrisNoTienHueco" classname="RompeCabezasTest" time="0.001"/>
+  <testcase name="testGenerarPosiblesMovimentosHueco" classname="RompeCabezasTest" time="0.001"/>
+  <testcase name="testMatrisNoTienHueco" classname="RompeCabezasTest" time="0.0"/>
   <system-out><![CDATA[1   2   3   4   
 5   6   7   8   
 9   10  11  12  

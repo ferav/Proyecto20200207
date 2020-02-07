@@ -10,8 +10,8 @@ package Proyecto20200207;
  * @author Administrador
  */
 public class Posicion {
-    int fila;
-    int columna;
+    private int fila;
+    private int columna;
     
     Posicion(int fila, int columna)
     {

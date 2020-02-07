@@ -12,14 +12,23 @@ import java.util.ArrayList;
  * @author Administrador
  */
 public class RompeCabezas {
-    int[][] matriz;
-    Hueco hueco;
+    private int[][] matriz;
+    private Hueco hueco;
     
     public RompeCabezas(int[][] matriz)
     {
         this.matriz = matriz;
         hueco = new Hueco();
         obtenerPosicionHueco();
+    }
+    
+    public int[][] getMatriz()
+    {
+        return matriz;
+    }
+    public Hueco getHueco()
+    {
+        return hueco;
     }
     
     
@@ -111,7 +120,6 @@ public class RompeCabezas {
         {
             cociente = cociente / 10;
             res = res + 1;
-            
         }
         while(cociente != 0);
         return res;
@@ -126,8 +134,8 @@ public class RompeCabezas {
             {
                 if(matriz[x][y] == 0)
                 {
-                    hueco.posicion.fila = x;
-                    hueco.posicion.columna = y;
+                    hueco.getPosicion().setFila(x);
+                    hueco.getPosicion().setColumna(y);
                 }
             }
             
@@ -138,9 +146,9 @@ public class RompeCabezas {
     public ArrayList generarPosiblesMovimientosHueco()
     {
         ArrayList<Posicion> res = new ArrayList();
+        int filaHueco = hueco.getPosicion().getFila();
+        int columnaHueco = hueco.getPosicion().getColumna();
         
-        int filaHueco = hueco.posicion.fila;
-        int columnaHueco = hueco.posicion.columna;
         if(filaHueco + 1 < matriz.length)
         {
             res.add(new Posicion(filaHueco + 1, columnaHueco));
@@ -164,11 +172,11 @@ public class RompeCabezas {
     
     public void moverHueco(Posicion posicion)
     {
-        int numero = matriz[posicion.fila][posicion.columna];
-        matriz[ hueco.posicion.fila][hueco.posicion.columna] = numero ;
-        hueco.posicion.fila = posicion.fila;
-        hueco.posicion.columna = posicion.columna;
-        matriz[posicion.fila][posicion.columna] = 0;
+        int numero = matriz[posicion.getFila()][posicion.getColumna()];
+        matriz[ hueco.getPosicion().getFila()][hueco.getPosicion().getColumna()] = numero ;
+        hueco.getPosicion().setFila(posicion.getFila());
+        hueco.getPosicion().setColumna(posicion.getColumna());
+        matriz[posicion.getFila()][posicion.getColumna()] = 0;
                 
     }
 

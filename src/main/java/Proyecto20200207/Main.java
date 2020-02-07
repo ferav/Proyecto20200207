@@ -34,10 +34,10 @@ public class Main {
         
         rompeCabezas.obtenerPosicionHueco();
         ArrayList<Posicion> movimientos = rompeCabezas.generarPosiblesMovimientosHueco();
-         System.out.println("fila hueco :" + rompeCabezas.hueco.posicion.fila + " columna hueco: "+ rompeCabezas.hueco.posicion.columna);
+        System.out.println("fila hueco :" + rompeCabezas.getHueco().getPosicion().getFila() + " columna hueco: "+ rompeCabezas.getHueco().getPosicion().getColumna());
         for(int i = 0;i<movimientos.size();i++)
         {
-            System.out.println("fila :" + movimientos.get(i).fila + " columna: "+movimientos.get(i).columna);
+            System.out.println("fila :" + movimientos.get(i).getFila() + " columna: "+movimientos.get(i).getColumna());
         }
         
         

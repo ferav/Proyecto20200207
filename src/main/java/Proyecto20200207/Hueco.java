@@ -10,7 +10,7 @@ package Proyecto20200207;
  * @author Administrador
  */
 public class Hueco {
-    Posicion posicion;
+    private Posicion posicion;
     public Hueco(int fila1, int columna1)
     {
         posicion = new Posicion(fila1, columna1);
@@ -20,5 +20,10 @@ public class Hueco {
     {
         posicion = new Posicion();
     }
+    public Posicion getPosicion()
+    {
+        return posicion;
+    }
+    
 
 }
